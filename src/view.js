@@ -8,7 +8,7 @@ class View {
         this.content = document.getElementById('content');
         this.initPages();
 
-        this.replaceContent(this.pages.home);
+        this.content.appendChild(this.pages.home);
         this.addEvents();
     }
     initPages(){
