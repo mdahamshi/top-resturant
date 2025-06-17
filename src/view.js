@@ -1,15 +1,19 @@
 import  home from   './pages/home.js';
 import menu from './pages/menu.js';
 import about from './pages/about.js';
+import {sb_utils as sb} from "./sb-utils/utils.js";
+
 
 class View {
 
     constructor(){
         this.content = document.getElementById('content');
         this.initPages();
-
+        this.content.innerHTML = '';
         this.content.appendChild(this.pages.home);
         this.addEvents();
+        sb.addCopyRight('SaraFood');
+
     }
     initPages(){
         this.pages.home = home();

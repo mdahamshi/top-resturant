@@ -91,8 +91,14 @@ header nav button {
   border: none;
 
 }
+body {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
 #content {
   padding: var(--sb-padding);
+  flex: 1;
 }
 
 .hero-section {
@@ -116,6 +122,9 @@ header nav button {
 .menu-item-action {
   justify-content: space-between;
 
+}
+footer {
+  padding: var(--sb-padding);
 }
 @media only screen and (min-width: 700px) {
   #content {
