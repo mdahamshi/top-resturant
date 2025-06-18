@@ -8,6 +8,7 @@ class View {
 
     constructor(){
         this.content = document.getElementById('content');
+        this.navLinks = document.querySelector('.nav-links');
         this.initPages();
         this.content.innerHTML = '';
         this.content.appendChild(this.pages.home);
@@ -32,13 +33,15 @@ class View {
         buttons.forEach(button => {
             button.addEventListener('click', () => {
                 const action = button.dataset.action;
-                if(this.actions.includes(action))
+                if(this.actions.includes(action)){
                     this.replaceContent(action)
+                    this.navLinks.classList.toggle('active');
+                }
             });
         });
 
         document.querySelector('.menu-toggle').addEventListener('click', () => {
-            document.querySelector('.nav-links').classList.toggle('active');
+            this.navLinks.classList.toggle('active');
         });
 
     }
