@@ -35,7 +35,7 @@ class View {
                 const action = button.dataset.action;
                 if(this.actions.includes(action)){
                     this.replaceContent(action)
-                    this.navLinks.classList.toggle('active');
+                    this.navLinks.classList.remove('active');
                 }
             });
         });
