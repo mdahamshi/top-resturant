@@ -8,7 +8,7 @@ sed -i 's/development/production/ig' webpack.config.js
 
 npx webpack
 
-sed -i 's/producti/development/ig' webpack.config.js
+sed -i 's/production/development/ig' webpack.config.js
 
 git add dist -f
 
