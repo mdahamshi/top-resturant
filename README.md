@@ -11,6 +11,6 @@ Mobile first design
 
 ![screenshot](./sc.png)
 
-<!-- ![screenshot](./sc2.png) -->
+![screenshot](./sc2.png)
 
 
