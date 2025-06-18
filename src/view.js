@@ -21,10 +21,10 @@ class View {
         this.pages.about = about();
     }
     pages = {};
-    replaceContent(newContent){
+    replaceContent(action){
+        let newContent = this.pages[action];
         let c = this.content;
-        let child = c.firstChild;
-        c.replaceChild(newContent, child);
+        c.replaceChild(newContent, c.firstChild);
     }
     actions = ['home', 'about', 'menu'];
     addEvents(){
@@ -33,9 +33,14 @@ class View {
             button.addEventListener('click', () => {
                 const action = button.dataset.action;
                 if(this.actions.includes(action))
-                    this.replaceContent(this.pages[action])
+                    this.replaceContent(action)
             });
         });
+
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
     }
 }
 

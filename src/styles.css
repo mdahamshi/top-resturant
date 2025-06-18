@@ -72,7 +72,13 @@ nav.flex-row {
   padding: var(--sb-padding);
   border-bottom: 1px solid var(--sb-border-color-thin);
 }
-
+button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+button:focus-visible, button:focus {
+    outline: none;
+}
 button {
   cursor: pointer;
 }
@@ -129,6 +135,14 @@ body {
 footer {
   padding: var(--sb-padding);
 }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+  }
+  .nav-links.active {
+    display: flex;
+  }
 @media only screen and (min-width: 700px) {
   #content {
     max-width: 980px;
@@ -136,6 +150,14 @@ footer {
   }
   .hero-section {
     height: 500px;
+
+  }
+  .menu-toggle {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: row;
 
   }
 }
